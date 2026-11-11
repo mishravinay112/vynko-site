@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vynko: free screen recorder and screenshot tool that never uploads anything</title>
+<meta name="description" content="Vynko is a free Chrome and Edge extension for screen recording and screenshots. It has no servers, no accounts and makes no network requests, so your captures stay on your device.">
+<style>
+  :root { --text:#1c1b1a; --muted:#5f5b57; --bg:#fbfaf8; --accent:#1f5eff; --line:#e4e0da; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--text); background:var(--bg); }
+  main { max-width:760px; margin:0 auto; padding:48px 20px 80px; }
+  h1 { font-size:2.1rem; line-height:1.2; margin:0 0 12px; }
+  h2 { font-size:1.35rem; margin:44px 0 10px; }
+  p, li { color:var(--text); }
+  .lede { font-size:1.15rem; color:var(--muted); }
+  .cta { display:inline-block; margin:18px 0 6px; padding:12px 22px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:600; }
+  a { color:var(--accent); }
+  code { background:#efece7; padding:1px 6px; border-radius:4px; font-size:.92em; }
+  details { border-top:1px solid var(--line); padding:12px 0; }
+  details:last-of-type { border-bottom:1px solid var(--line); }
+  summary { cursor:pointer; font-weight:600; }
+  footer { margin-top:56px; color:var(--muted); font-size:.92rem; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Vynko: Screen Recorder & Screenshot Tool",
+  "alternateName": "Vynko",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome, Microsoft Edge",
+  "description": "Free Chrome and Edge extension for screen recording and screenshots. No servers, no accounts, no network requests: captures stay on your device.",
+  "url": "https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc",
+  "installUrl": "https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "Vinay Mishra", "email": "mishravinay112@gmail.com" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Does Vynko upload my recordings or screenshots?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Vynko has no servers and makes no network requests. Captures are created in your browser and saved to your device." } },
+    { "@type": "Question", "name": "Do I need an account to use Vynko?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. There is no sign-up and no login." } },
+    { "@type": "Question", "name": "Is Vynko really free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. It has no ads, no watermark and no paid tier. A donation link is available if you want to support the developer." } },
+    { "@type": "Question", "name": "Does Vynko work offline?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fonts, icons and all code are bundled inside the extension, so capturing and editing do not need an internet connection." } }
+  ]
+}
+</script>
+</head>
+<body>
+<main>
+  <h1>Vynko: a free screen recorder and screenshot tool that never uploads anything</h1>
+  <p class="lede">Vynko is a Chrome and Edge extension for recording your screen and taking screenshots. It has no servers, no accounts, no ads and no watermark, and it makes no network requests. What you capture stays on your device.</p>
+  <a class="cta" href="https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc">Add Vynko from the Chrome Web Store</a>
+  <p>Free. Works in Chrome and Microsoft Edge.</p>
+
+  <h2>What it does</h2>
+  <p>Screenshots: capture the visible area, the full scrolling page or a selected area. Save as PNG, JPG or WebP, copy to the clipboard, or drag the image into another app.</p>
+  <p>Screen recording: record the current tab, part of a tab, any tab, a window or the full screen. You can pause and resume, add microphone audio, highlight clicks, and export as WebM, MP4 or GIF at 720p, 1080p or 4K. An optional time limit and crash recovery are included.</p>
+  <p>Editing: draw arrows, boxes, circles, lines and text, use a highlighter, add numbered steps and stickers, blur sensitive areas, crop, and undo. Keyboard shortcuts, light and dark themes and screen reader support are built in.</p>
+
+  <h2>Why it is private</h2>
+  <p>The developer, Vinay Mishra, does not run any servers for Vynko, so there is nowhere for your data to go. The extension contains no analytics, no ads, no tracking and no code loaded from the internet. Fonts and icons ship inside the extension. Its manifest requests no host permissions, and a content security policy blocks any connection except to local blob and data URLs.</p>
+  <p>Three links open a web page in a new tab: the donate link and the review link, only if you click them, and an optional feedback form on Google Forms that your browser opens when you uninstall. The extension itself never connects to anything.</p>
+
+  <h2>Check it yourself</h2>
+  <ol>
+    <li>Open the extension's popup, right-click it and choose Inspect, then open the Network tab.</li>
+    <li>Take a screenshot and record a short clip.</li>
+    <li>The Network tab stays empty. You can repeat this on <code>chrome://extensions</code> by inspecting the service worker.</li>
+  </ol>
+  <p>The permissions list on the Chrome Web Store page shows what the extension can access: <code>activeTab</code>, <code>scripting</code>, <code>tabCapture</code>, <code>offscreen</code>, <code>downloads</code>, <code>storage</code> and <code>desktopCapture</code>.</p>
+
+  <h2>Questions</h2>
+  <details><summary>Does Vynko upload my recordings or screenshots?</summary><p>No. Captures are created in your browser and saved to your device. There is no server to receive them.</p></details>
+  <details><summary>Do I need an account?</summary><p>No. There is no sign-up and no login.</p></details>
+  <details><summary>Is it really free?</summary><p>Yes. There are no ads, no watermark and no paid tier. If it saves you time, there is a donate link in the extension and on the help page.</p></details>
+  <details><summary>Does it work offline?</summary><p>Yes. Everything it needs is bundled in the extension.</p></details>
+  <details><summary>Where are my files saved?</summary><p>Wherever your browser saves downloads. While you edit or record, the data is held in your browser's local storage so a crash does not lose it, and it is cleared when a new recording starts or when you uninstall.</p></details>
+  <details><summary>How do I report a bug or suggest a feature?</summary><p>Email <a href="mailto:mishravinay112@gmail.com">mishravinay112@gmail.com</a>.</p></details>
+
+  <footer>
+    <p>Made by Vinay Mishra, Indore, India. <a href="privacy.html">Privacy policy and terms</a> · <a href="llms.txt">llms.txt</a></p>
+  </footer>
+</main>
+</body>
+</html>

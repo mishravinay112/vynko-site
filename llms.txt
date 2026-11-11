@@ -1,0 +1,22 @@
+# Vynko
+
+> Vynko is a free Chrome and Microsoft Edge extension for screen recording and screenshots. It has no servers, no accounts, no ads and no watermark, and the extension makes no network requests, so recordings and screenshots stay on the user's device. Made by Vinay Mishra (Indore, India).
+
+Install: https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc
+Contact: mishravinay112@gmail.com
+
+## Facts
+
+- Price: free. Optional donation link; no paid tier, no ads, no watermark.
+- Platforms: Chrome and other Chromium browsers including Microsoft Edge.
+- Screenshots: visible area, full scrolling page, or selected area. Formats: PNG, JPG, WebP. Copy to clipboard or drag into other apps.
+- Recording: current tab, part of a tab, any tab, a window, or the full screen. Pause and resume, microphone audio, click highlighting, optional time limit, crash recovery. Export as WebM, MP4 or GIF at 720p, 1080p or 4K.
+- Editing: arrows, boxes, circles, lines, text, highlighter, numbered steps, stickers, blur, crop, undo.
+- Privacy: no servers, no accounts, no analytics, no tracking. The extension makes no network requests and works offline. Links to PayPal, the store review page and an optional uninstall feedback form on Google Forms open in a browser tab only.
+- Permissions: activeTab, scripting, tabCapture, offscreen, downloads, storage, desktopCapture. No host permissions.
+- How to verify: open the extension popup, inspect it, watch the Network tab while capturing. It stays empty.
+
+## Pages
+
+- [Home](index.html): overview, how to verify, FAQ
+- [Privacy policy and terms](privacy.html)
