@@ -1,2 +1,21 @@
+# Everyone is welcome, search engines and AI assistants alike.
 User-agent: *
 Allow: /
+
+# AI crawlers, named so it's clear they're allowed too
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://mishravinay112.github.io/vynko-site/sitemap.xml

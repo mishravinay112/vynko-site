@@ -4,21 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vynko privacy policy and terms of use</title>
-<meta name="description" content="Vynko privacy policy: no servers, no accounts, no analytics and no network requests. Captures stay on your device.">
-<style>
-  :root { --text:#1c1b1a; --muted:#5f5b57; --bg:#fbfaf8; --accent:#1f5eff; }
-  body { margin:0; font:17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--text); background:var(--bg); }
-  main { max-width:760px; margin:0 auto; padding:48px 20px 80px; }
-  h2 { font-size:1.35rem; margin:44px 0 10px; } h3 { font-size:1.05rem; margin:22px 0 6px; }
-  a { color:var(--accent); } .lede { color:var(--muted); } .toc a { margin-right:16px; }
-</style>
+<meta name="description" content="Vynko privacy policy and terms: no servers, no accounts, no analytics and no network requests. Screenshots, recordings, webcam and microphone stay on your device.">
+<link rel="canonical" href="https://mishravinay112.github.io/vynko-site/privacy.html">
+<link rel="icon" href="icon.png" type="image/png">
+<link rel="alternate" hreflang="en" href="https://mishravinay112.github.io/vynko-site/privacy.html">
+<link rel="alternate" hreflang="es" href="https://mishravinay112.github.io/vynko-site/es/privacy.html">
+<link rel="alternate" hreflang="pt-BR" href="https://mishravinay112.github.io/vynko-site/pt-br/privacy.html">
+<link rel="alternate" hreflang="hi" href="https://mishravinay112.github.io/vynko-site/hi/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://mishravinay112.github.io/vynko-site/fr/privacy.html">
+<link rel="alternate" hreflang="de" href="https://mishravinay112.github.io/vynko-site/de/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://mishravinay112.github.io/vynko-site/ja/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://mishravinay112.github.io/vynko-site/privacy.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vynko privacy policy and terms of use">
+<meta property="og:url" content="https://mishravinay112.github.io/vynko-site/privacy.html">
+<meta property="og:image" content="https://mishravinay112.github.io/vynko-site/og.png">
+<link rel="preload" href="fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 <main>
-  <p><a href="index.html">&larr; Vynko</a></p>
+  <header><a href="index.html"><img src="icon.png" alt="" width="30" height="30"></a><a href="index.html">Vynko</a></header>
+  <nav class="langs" aria-label="Language"><a href="privacy.html" hreflang="en" lang="en" aria-current="page">English</a><a href="es/privacy.html" hreflang="es" lang="es">Español</a><a href="pt-br/privacy.html" hreflang="pt-BR" lang="pt-BR">Português</a><a href="hi/privacy.html" hreflang="hi" lang="hi">हिन्दी</a><a href="fr/privacy.html" hreflang="fr" lang="fr">Français</a><a href="de/privacy.html" hreflang="de" lang="de">Deutsch</a><a href="ja/privacy.html" hreflang="ja" lang="ja">日本語</a></nav>
   <h1>Terms of Use and Privacy Policy</h1>
 
-  <p class="lede">Effective November 11, 2026. Plain English first: Vynko is free, it runs entirely in your browser, I never see what you capture, and you're responsible for how you use it.</p>
+  <p class="lede">Effective November 17, 2026. Plain English first: Vynko is free, it runs entirely in your browser, I never see what you capture, and you're responsible for how you use it.</p>
   <nav class="toc" aria-label="On this page"><a href="#terms">Terms of Use</a><a href="#privacy">Privacy Policy</a></nav>
 
   <h2 id="terms">Terms of Use</h2>
@@ -64,7 +74,7 @@
 
   <h3>What stays on your device</h3>
   <ul>
-    <li>Your settings, such as formats, theme and editor colors (browser extension storage).</li>
+    <li>Your settings, such as formats, theme, editor colors, your file name pattern and download folder (browser extension storage).</li>
     <li>Recordings while they're in progress, kept in the browser's local database so they can be recovered after a crash. They're removed once a new recording starts after the old one was saved.</li>
     <li>Screenshots while the editor is open, and the files you choose to download.</li>
   </ul>
@@ -72,15 +82,16 @@
 
   <h3>Permissions</h3>
   <ul>
-    <li><b>activeTab, scripting:</b> work only on the tab you choose, to capture it, show the area picker and the on-page editor.</li>
+    <li><b>activeTab, scripting:</b> work only on the tab you choose, to capture it, show the area picker, the capture countdown and the on-page editor. To offer "Blur private info", Vynko looks for emails and phone numbers in that page's text at the moment you capture. That check runs in your browser and nothing is stored or sent.</li>
     <li><b>tabCapture, offscreen:</b> record the tab when you start a recording.</li>
     <li><b>downloads:</b> save your files.</li>
     <li><b>storage:</b> remember your settings.</li>
-    <li><b>desktopCapture:</b> open your browser's own "choose what to share" box when you pick Choose, so you can record any tab, a window or your screen. Only what you pick there is recorded.</li>
+    <li><b>Microphone and camera:</b> only if you turn on Microphone or Webcam, your browser asks once. Your voice and webcam video go only into the recording you save. Vynko never sends or keeps them anywhere else.</li>
+<li><b>desktopCapture:</b> open your browser's own "choose what to share" box when you pick Choose, so you can record any tab, a window or your screen. Only what you pick there is recorded.</li>
   </ul>
 
   <h3>Network</h3>
-  <p>Vynko makes no network requests. Fonts and icons are built in. The extension itself never connects to a server. Three links open a web page in a new tab: the PayPal link and the review link, only if you click them, and a short optional feedback form on Google Forms that your browser opens when you uninstall Vynko. The form address includes the Vynko version number and nothing else. PayPal's and Google's own privacy policies apply on those pages.</p>
+  <p>Vynko makes no network requests, and its content security policy only allows connections to local blob and data URLs. Fonts and icons are built in. The extension itself never connects to a server. Three links open a web page in a new tab: the PayPal link and the review link, only if you click them, and a short optional feedback form on Google Forms that your browser opens when you uninstall Vynko. The form address includes the Vynko version number and nothing else. PayPal's and Google's own privacy policies apply on those pages.</p>
 
   <h3>Your rights</h3>
   <p>Privacy laws such as the GDPR and UK GDPR in Europe and the CCPA in California give you rights over data a company holds about you. I don't hold any data about you, so there's nothing to access, correct, delete or sell. To clear Vynko's local data, uninstall it or clear its extension data in your browser.</p>
@@ -95,5 +106,16 @@
   <p>Questions about these terms or your privacy: Vinay Mishra, <a href="mailto:mishravinay112@gmail.com">mishravinay112@gmail.com</a>.</p>
 
 </main>
+<script>
+// Show the policy in the reader's language. A language picked from the list above is remembered.
+(() => {
+  const pages = { es: 'es', pt: 'pt-br', hi: 'hi', fr: 'fr', de: 'de', ja: 'ja' };
+  for (const a of document.querySelectorAll('.langs a')) a.addEventListener('click', () => { try { localStorage.vynkoLang = a.hreflang; } catch {} });
+  let picked = null;
+  try { picked = localStorage.vynkoLang; } catch {}
+  const lang = (picked || navigator.language || '').toLowerCase().split('-')[0];
+  if (pages[lang]) location.replace(`${pages[lang]}/privacy.html${location.hash}`);
+})();
+</script>
 </body>
 </html>

@@ -3,91 +3,206 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vynko: free screen recorder and screenshot tool that never uploads anything</title>
-<meta name="description" content="Vynko is a free Chrome and Edge extension for screen recording and screenshots. It has no servers, no accounts and makes no network requests, so your captures stay on your device.">
-<style>
-  :root { --text:#1c1b1a; --muted:#5f5b57; --bg:#fbfaf8; --accent:#1f5eff; --line:#e4e0da; }
-  * { box-sizing: border-box; }
-  body { margin:0; font:17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--text); background:var(--bg); }
-  main { max-width:760px; margin:0 auto; padding:48px 20px 80px; }
-  h1 { font-size:2.1rem; line-height:1.2; margin:0 0 12px; }
-  h2 { font-size:1.35rem; margin:44px 0 10px; }
-  p, li { color:var(--text); }
-  .lede { font-size:1.15rem; color:var(--muted); }
-  .cta { display:inline-block; margin:18px 0 6px; padding:12px 22px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:600; }
-  a { color:var(--accent); }
-  code { background:#efece7; padding:1px 6px; border-radius:4px; font-size:.92em; }
-  details { border-top:1px solid var(--line); padding:12px 0; }
-  details:last-of-type { border-bottom:1px solid var(--line); }
-  summary { cursor:pointer; font-weight:600; }
-  footer { margin-top:56px; color:var(--muted); font-size:.92rem; }
-</style>
+<title>Vynko: Free Screen Recorder and Screenshot Extension for Chrome and Edge</title>
+<meta name="description" content="Free screen recorder and screenshot tool for Chrome and Edge. Full page screenshots, screen recording with audio and webcam, trim, GIF export, blur and annotate. No sign-up, no watermark, nothing uploaded.">
+<link rel="canonical" href="https://mishravinay112.github.io/vynko-site/">
+<link rel="icon" href="icon.png" type="image/png">
+<link rel="alternate" type="text/plain" href="llms.txt" title="Vynko facts for AI assistants">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vynko">
+<meta property="og:title" content="Vynko: free screen recorder and screenshot tool for Chrome">
+<meta property="og:description" content="Full page screenshots, screen recording with audio and webcam, trim and GIF export. Free, no watermark, nothing leaves your device.">
+<meta property="og:url" content="https://mishravinay112.github.io/vynko-site/">
+<meta property="og:image" content="https://mishravinay112.github.io/vynko-site/og.png">
+<meta property="og:image:width" content="1400">
+<meta property="og:image:height" content="560">
+<meta property="og:image:alt" content="Vynko screen recorder and screenshot extension">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Vynko: Screen Recorder & Screenshot Tool",
-  "alternateName": "Vynko",
-  "applicationCategory": "BrowserApplication",
-  "operatingSystem": "Chrome, Microsoft Edge",
-  "description": "Free Chrome and Edge extension for screen recording and screenshots. No servers, no accounts, no network requests: captures stay on your device.",
-  "url": "https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc",
-  "installUrl": "https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "author": { "@type": "Person", "name": "Vinay Mishra", "email": "mishravinay112@gmail.com" }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Does Vynko upload my recordings or screenshots?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Vynko has no servers and makes no network requests. Captures are created in your browser and saved to your device." } },
-    { "@type": "Question", "name": "Do I need an account to use Vynko?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. There is no sign-up and no login." } },
-    { "@type": "Question", "name": "Is Vynko really free?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. It has no ads, no watermark and no paid tier. A donation link is available if you want to support the developer." } },
-    { "@type": "Question", "name": "Does Vynko work offline?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fonts, icons and all code are bundled inside the extension, so capturing and editing do not need an internet connection." } }
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://mishravinay112.github.io/vynko-site/#app",
+      "name": "Vynko: Screen Recorder & Screenshot Tool",
+      "alternateName": ["Vynko", "Vynko screen recorder", "Vynko screenshot"],
+      "applicationCategory": "MultimediaApplication",
+      "applicationSubCategory": "Screen recorder and screenshot tool",
+      "operatingSystem": "Google Chrome, Microsoft Edge and other Chromium browsers on Windows, macOS, Linux and ChromeOS",
+      "softwareVersion": "1.0.2",
+      "description": "Free browser extension for screenshots and screen recording. Full page, visible area, selected area and window screenshots; tab, area, window and full screen recording with tab audio, microphone and webcam; trim, GIF export, annotation, blur and auto-blur of emails and phone numbers. Nothing is uploaded.",
+      "url": "https://mishravinay112.github.io/vynko-site/",
+      "installUrl": "https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc",
+      "downloadUrl": "https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc",
+      "image": "https://mishravinay112.github.io/vynko-site/og.png",
+      "screenshot": [
+        "https://mishravinay112.github.io/vynko-site/shot-record.png",
+        "https://mishravinay112.github.io/vynko-site/shot-annotate.png",
+        "https://mishravinay112.github.io/vynko-site/shot-full-page.png"
+      ],
+      "inLanguage": ["en", "es", "pt-BR", "hi", "fr", "de", "ja"],
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Full page screenshot (scrolling capture, lazy-loaded content, inner scrolling panels)",
+        "Visible area, selected area, window and full screen screenshots",
+        "Screen recording of a tab, part of a tab, any window or the whole screen",
+        "Tab audio, microphone and webcam bubble in recordings",
+        "Pause, resume, auto-stop timer and crash recovery",
+        "Export WebM, MP4 or GIF at 720p, 1080p or 4K",
+        "Trim and cut recordings, export GIF with size estimate",
+        "Annotate: arrows, shapes, text, highlighter, numbered steps, stickers, crop",
+        "Blur and one-click auto-blur of emails and phone numbers",
+        "Capture timer (3, 5 or 10 seconds)",
+        "Custom file names and download folder",
+        "No account, no watermark, no ads, no uploads, works offline"
+      ],
+      "author": { "@id": "https://mishravinay112.github.io/vynko-site/#author" },
+      "publisher": { "@id": "https://mishravinay112.github.io/vynko-site/#author" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://mishravinay112.github.io/vynko-site/#author",
+      "name": "Vinay Mishra",
+      "email": "mailto:mishravinay112@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indore", "addressCountry": "IN" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://mishravinay112.github.io/vynko-site/#site",
+      "url": "https://mishravinay112.github.io/vynko-site/",
+      "name": "Vynko",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I take a full page screenshot in Chrome?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Install Vynko, open the page, click the Vynko icon and choose Full page, or press Alt+Shift+F. Vynko scrolls the page, waits for lazy-loaded images, hides sticky headers so they don't repeat, and saves one long PNG, JPG or WebP image." } },
+        { "@type": "Question", "name": "How do I record my screen in Chrome with audio?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Click the Vynko icon, open Record and choose Tab to record the current tab with its sound, or Choose to record any window or your whole screen. Turn on Microphone to add your voice and Webcam to add a camera bubble. Press Stop to save as WebM, MP4 or GIF." } },
+        { "@type": "Question", "name": "Is Vynko free, and does it add a watermark?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Vynko is completely free with no watermark, no ads, no time limit and no paid tier." } },
+        { "@type": "Question", "name": "Does Vynko upload my recordings or screenshots?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Vynko has no servers and the extension makes no network requests. Captures are made in your browser and saved to your device." } },
+        { "@type": "Question", "name": "Can I trim a screen recording or turn it into a GIF?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. In the Vynko editor, press S to split the video at the playhead, click any part to remove it, then download the result or save it as a small, medium or large GIF. Each GIF size shows an estimated file size first." } },
+        { "@type": "Question", "name": "Do I need an account to use Vynko?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. There is no sign-up and no login." } },
+        { "@type": "Question", "name": "Does Vynko work offline?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. All code, fonts and icons are inside the extension." } }
+      ]
+    }
   ]
 }
 </script>
 </head>
 <body>
 <main>
-  <h1>Vynko: a free screen recorder and screenshot tool that never uploads anything</h1>
-  <p class="lede">Vynko is a Chrome and Edge extension for recording your screen and taking screenshots. It has no servers, no accounts, no ads and no watermark, and it makes no network requests. What you capture stays on your device.</p>
-  <a class="cta" href="https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc">Add Vynko from the Chrome Web Store</a>
-  <p>Free. Works in Chrome and Microsoft Edge.</p>
+  <header><img src="icon.png" alt="" width="32" height="32">Vynko</header>
 
-  <h2>What it does</h2>
-  <p>Screenshots: capture the visible area, the full scrolling page or a selected area. Save as PNG, JPG or WebP, copy to the clipboard, or drag the image into another app.</p>
-  <p>Screen recording: record the current tab, part of a tab, any tab, a window or the full screen. You can pause and resume, add microphone audio, highlight clicks, and export as WebM, MP4 or GIF at 720p, 1080p or 4K. An optional time limit and crash recovery are included.</p>
-  <p>Editing: draw arrows, boxes, circles, lines and text, use a highlighter, add numbered steps and stickers, blur sensitive areas, crop, and undo. Keyboard shortcuts, light and dark themes and screen reader support are built in.</p>
+  <h1>Free screen recorder and screenshot tool for Chrome and Edge</h1>
+  <p class="lede">Vynko takes full page screenshots and records your screen with sound, microphone and webcam. Trim the video, save it as a GIF, blur private details and annotate. It's free, has no watermark and no sign-up, and nothing you capture ever leaves your device.</p>
+  <a class="cta" href="https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc">Add to Chrome, it's free</a>
+  <a class="cta alt" href="#how-to">How to use it</a>
+  <p>Works in Google Chrome, Microsoft Edge and other Chromium browsers on Windows, Mac, Linux and Chromebook. Available in English, Español, Português, हिन्दी, Français, Deutsch and 日本語.</p>
 
-  <h2>Why it is private</h2>
-  <p>The developer, Vinay Mishra, does not run any servers for Vynko, so there is nowhere for your data to go. The extension contains no analytics, no ads, no tracking and no code loaded from the internet. Fonts and icons ship inside the extension. Its manifest requests no host permissions, and a content security policy blocks any connection except to local blob and data URLs.</p>
-  <p>Three links open a web page in a new tab: the donate link and the review link, only if you click them, and an optional feedback form on Google Forms that your browser opens when you uninstall. The extension itself never connects to anything.</p>
+  <figure>
+    <img class="shot" src="shot-record.png" width="1280" height="800" alt="Vynko recording a browser tab with tab sound, microphone level and a live preview">
+    <figcaption>Recording a tab with sound and microphone, with pause and stop.</figcaption>
+  </figure>
 
-  <h2>Check it yourself</h2>
+  <h2>What Vynko does</h2>
+  <ul class="grid">
+    <li><b>Full page screenshot</b>Scrolls and stitches the whole page, including lazy-loaded images and apps that scroll an inner panel like Gmail or Slack.</li>
+    <li><b>Any screenshot</b>Visible area, a selected area, another window or your whole screen. PNG, JPG or WebP.</li>
+    <li><b>Screen recorder</b>Record a tab, part of a tab, any window or the full screen at 720p, 1080p or 4K.</li>
+    <li><b>Sound, mic and webcam</b>Tab audio, your voice with a live level meter, and a round webcam bubble.</li>
+    <li><b>Trim and cut</b>Split the video and remove any part before you download.</li>
+    <li><b>GIF maker</b>Record straight to GIF or turn a video into a small, medium or large GIF with a size estimate.</li>
+    <li><b>Annotate</b>Arrows, boxes, circles, text, highlighter, numbered steps, stickers and crop.</li>
+    <li><b>Blur private info</b>Blur anything by hand, or blur every email and phone number on the page in one click.</li>
+    <li><b>Timer</b>Wait 3, 5 or 10 seconds so you can open a menu before the capture.</li>
+    <li><b>Your file names</b>Name files with the page title, site, date and time, and save into a folder of your choice.</li>
+  </ul>
+
+  <h2 id="how-to">How to use Vynko</h2>
+
+  <h3 id="full-page-screenshot">How to take a full page screenshot in Chrome</h3>
   <ol>
-    <li>Open the extension's popup, right-click it and choose Inspect, then open the Network tab.</li>
-    <li>Take a screenshot and record a short clip.</li>
-    <li>The Network tab stays empty. You can repeat this on <code>chrome://extensions</code> by inspecting the service worker.</li>
+    <li>Add Vynko from the Chrome Web Store and pin it to the toolbar.</li>
+    <li>Open the page, click the Vynko icon and choose <b>Full page</b>, or press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.</li>
+    <li>Vynko scrolls the page, hides sticky headers so they don't repeat, and opens the result in the editor. Click <b>Download</b> or <b>Copy</b>.</li>
   </ol>
-  <p>The permissions list on the Chrome Web Store page shows what the extension can access: <code>activeTab</code>, <code>scripting</code>, <code>tabCapture</code>, <code>offscreen</code>, <code>downloads</code>, <code>storage</code> and <code>desktopCapture</code>.</p>
+  <figure>
+    <img class="shot" src="shot-full-page.png" width="1280" height="800" alt="A full page screenshot of a long web page captured with Vynko" loading="lazy">
+  </figure>
 
-  <h2>Questions</h2>
-  <details><summary>Does Vynko upload my recordings or screenshots?</summary><p>No. Captures are created in your browser and saved to your device. There is no server to receive them.</p></details>
+  <h3 id="record-screen">How to record your screen in Chrome with audio</h3>
+  <ol>
+    <li>Click the Vynko icon and open <b>Record</b>.</li>
+    <li>Choose <b>Tab</b> for this tab with its sound, <b>Area</b> for part of it, or <b>Choose</b> for any window or your whole screen.</li>
+    <li>Turn on <b>Microphone</b> to add your voice and <b>Webcam</b> to add a camera bubble in the corner.</li>
+    <li>Click the icon again and press <b>Stop</b>. The video opens in the editor, ready to trim and download as WebM or MP4.</li>
+  </ol>
+
+  <h3 id="screen-to-gif">How to record your screen as a GIF</h3>
+  <p>In <b>Record</b>, set the format to <b>GIF</b> and record as usual. Or record a video, then in the editor click <b>GIF</b> and pick small (480 px), medium (640 px) or large (960 px). Each size shows an estimated file size before you save.</p>
+
+  <h3 id="trim-recording">How to trim or cut a screen recording</h3>
+  <p>In the editor, move the playhead and press <kbd>S</kbd> to split. Click any part on the timeline to remove it, and click again to bring it back. <b>Download</b> saves only the parts you kept.</p>
+
+  <h3 id="screenshot-window">How to screenshot another window or your whole screen</h3>
+  <p>In <b>Screenshot</b>, choose <b>Window</b>, then pick the window or screen in your browser's sharing box. The image opens in the editor.</p>
+
+  <h3 id="blur">How to blur emails and phone numbers in a screenshot</h3>
+  <p>Take a screenshot. If the page shows emails or phone numbers, the editor shows <b>Blur private info</b>. One click covers them all. You can also drag the <b>Blur</b> tool over anything else, such as names, keys or card numbers.</p>
+  <figure>
+    <img class="shot" src="shot-annotate.png" width="1280" height="800" alt="Vynko editor with arrows, text, numbered steps and blurred private details on a screenshot" loading="lazy">
+  </figure>
+
+  <h3 id="shortcuts">Keyboard shortcuts</h3>
+  <div class="table"><table>
+    <tr><th>Action</th><th>Windows, Linux, ChromeOS</th><th>Mac</th></tr>
+    <tr><td>Screenshot the visible area</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd></td><td><kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd></td></tr>
+    <tr><td>Full page screenshot</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd></td><td><kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd></td></tr>
+    <tr><td>Screenshot a selected area</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd></td><td><kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd></td></tr>
+    <tr><td>Start or stop recording the tab</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd></td><td><kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd></td></tr>
+  </table></div>
+  <p>Change them at <code>chrome://extensions/shortcuts</code>.</p>
+
+  <h2 id="private">Private by design</h2>
+  <p>I don't run any servers for Vynko, so there is nowhere for your data to go. The extension has no analytics, ads or tracking, and loads no code from the internet. It requests no host permissions, and its content security policy only allows connections to local blob and data URLs. Your webcam and microphone go only into the recording you save.</p>
+  <p>Check it yourself: right-click the Vynko popup, choose Inspect, open the Network tab, then take a screenshot and record a clip. The Network tab stays empty.</p>
+  <p>Read the full <a href="privacy.html">privacy policy and terms</a>.</p>
+
+  <h2 id="compare">How Vynko compares</h2>
+  <div class="table"><table>
+    <tr><th></th><th>Vynko</th><th>Typical free screen recorders</th></tr>
+    <tr><td>Price</td><td>Free, no paid tier</td><td>Free tier with limits</td></tr>
+    <tr><td>Watermark</td><td>Never</td><td>Often on free plans</td></tr>
+    <tr><td>Account</td><td>Not needed</td><td>Usually required</td></tr>
+    <tr><td>Where files go</td><td>Your device only</td><td>Often uploaded to the vendor's cloud</td></tr>
+    <tr><td>Time limit</td><td>None</td><td>Often 5 to 15 minutes</td></tr>
+  </table></div>
+
+  <h2 id="faq">Questions</h2>
+  <details><summary>Is Vynko really free, with no watermark?</summary><p>Yes. No ads, no watermark, no time limit, no paid tier. If it saves you time, there's an optional donate link.</p></details>
+  <details><summary>Does Vynko upload my recordings or screenshots?</summary><p>No. Captures are created in your browser and saved to your device.</p></details>
   <details><summary>Do I need an account?</summary><p>No. There is no sign-up and no login.</p></details>
-  <details><summary>Is it really free?</summary><p>Yes. There are no ads, no watermark and no paid tier. If it saves you time, there is a donate link in the extension and on the help page.</p></details>
-  <details><summary>Does it work offline?</summary><p>Yes. Everything it needs is bundled in the extension.</p></details>
-  <details><summary>Where are my files saved?</summary><p>Wherever your browser saves downloads. While you edit or record, the data is held in your browser's local storage so a crash does not lose it, and it is cleared when a new recording starts or when you uninstall.</p></details>
-  <details><summary>How do I report a bug or suggest a feature?</summary><p>Email <a href="mailto:mishravinay112@gmail.com">mishravinay112@gmail.com</a>.</p></details>
+  <details><summary>Can it record system audio?</summary><p>Tab recordings include the tab's sound. When you pick a window or your screen with Choose, the browser's sharing box offers to include system audio on Windows and ChromeOS. On a Mac, only tab sound and your microphone can be recorded.</p></details>
+  <details><summary>Can I record my webcam with my screen?</summary><p>Yes. Turn on Webcam in the Record tab. A round camera bubble appears in the corner of the video.</p></details>
+  <details><summary>Where are my files saved?</summary><p>In your Downloads folder, or a folder inside it that you choose in Settings.</p></details>
+  <details><summary>Does it work offline?</summary><p>Yes. Everything it needs is inside the extension.</p></details>
+  <details><summary>Does it work in Microsoft Edge?</summary><p>Yes. Vynko works in Chrome, Edge and other Chromium browsers.</p></details>
+  <details><summary>How do I report a bug or ask for a feature?</summary><p>Email <a href="mailto:mishravinay112@gmail.com">mishravinay112@gmail.com</a>.</p></details>
 
   <footer>
-    <p>Made by Vinay Mishra, Indore, India. <a href="privacy.html">Privacy policy and terms</a> · <a href="llms.txt">llms.txt</a></p>
+    <p>Made by Vinay Mishra, Indore, India. <a href="privacy.html">Privacy policy and terms</a> · <a href="llms.txt">llms.txt</a> · <a href="https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc">Chrome Web Store</a></p>
   </footer>
 </main>
 </body>

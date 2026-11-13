@@ -1,0 +1,95 @@
+/* Same look as the Vynko extension: its tokens, type and raised "key" cards. */
+@font-face { font-family: Jost; src: url(fonts/jost.woff2) format('woff2'); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: 'Geist Mono'; src: url(fonts/geist-mono.woff2) format('woff2'); font-weight: 500; font-display: swap; }
+
+:root {
+  --font: Futura, Jost, sans-serif;
+  color-scheme: light dark;
+  --bg: #f5f4f1; --surface: #fdfdfb; --hover: #efeeeb; --text: #18181b; --muted: #5f5d66; --line: #e4e2dd;
+  --key-top: #ffffff; --key-bottom: #f8f7f4; --key-edge: #e2dfd8; --key-side: #d3cfc6; --well: #e9e7e2;
+  --accent: #f0531c; --accent-strong: #c2410c; --accent-text: #c2410c; --accent-soft: rgba(240, 83, 28, .12);
+  --shine: rgba(255, 255, 255, .95);
+  --shadow: 0 1px 2px rgba(24, 24, 27, .06), 0 8px 24px -6px rgba(24, 24, 27, .14);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141416; --surface: #1c1c20; --hover: #26262b; --text: #f3f2ef; --muted: #8d8b94; --line: #2c2c32;
+    --key-top: #26262b; --key-bottom: #1e1e22; --key-edge: #303036; --key-side: #08080a; --well: #0b0b0d;
+    --accent: #ff6a2b; --accent-text: #ff8a5c; --accent-soft: rgba(255, 106, 43, .16);
+    --shine: rgba(255, 255, 255, .07); --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px -8px rgba(0, 0, 0, .7);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.65 var(--font); -webkit-font-smoothing: antialiased; }
+main { max-width: 800px; margin: 0 auto; padding: 32px 20px 80px; }
+a { color: var(--accent-text); text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+/* header: the same brand mark as the popup */
+header { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
+header img { width: 30px; height: 30px; }
+header a { color: inherit; text-decoration: none; }
+
+h1 { margin: 28px 0 12px; font-size: clamp(1.9rem, 5vw, 2.6rem); font-weight: 600; line-height: 1.12; letter-spacing: -.02em; }
+h2 { margin: 52px 0 12px; font-size: 1.45rem; font-weight: 600; letter-spacing: -.01em; }
+h3 { margin: 26px 0 6px; font-size: 1.08rem; font-weight: 600; }
+.lede { color: var(--muted); font-size: 1.12rem; }
+b, strong { font-weight: 600; }
+
+/* buttons: the extension's primary and outline buttons */
+.cta {
+  display: inline-flex; align-items: center; gap: 8px; margin: 18px 10px 6px 0; padding: 12px 22px;
+  border: 1px solid transparent; border-radius: 12px; background: var(--accent-strong); color: #fff;
+  font-weight: 600; text-decoration: none;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .25) inset, 0 6px 18px -6px var(--accent);
+  transition: filter .15s, transform .15s;
+}
+.cta:hover { color: #fff; filter: brightness(1.07); }
+.cta:active { transform: translateY(1px); }
+.cta.alt { background: var(--key-top); color: var(--text); border-color: var(--key-edge); box-shadow: 0 1px 0 var(--shine) inset, 0 2px 0 var(--key-side); }
+.cta.alt:hover { color: var(--text); background: var(--hover); }
+
+/* raised cards, like the capture keys in the popup */
+ul.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 16px 0; padding: 0; list-style: none; }
+ul.grid li {
+  padding: 14px 16px; border: 1px solid var(--key-edge); border-radius: 14px;
+  background: linear-gradient(var(--key-top), var(--key-bottom));
+  box-shadow: 0 1px 0 var(--shine) inset, 0 3px 0 var(--key-side), 0 6px 16px -10px rgba(0, 0, 0, .35);
+  color: var(--muted); font-size: .95rem; line-height: 1.5;
+}
+ul.grid b { display: block; margin-bottom: 4px; color: var(--text); font-size: 1rem; }
+
+code, kbd { padding: 1px 6px; border-radius: 6px; font: 500 .85em 'Geist Mono', ui-monospace, monospace; }
+code { background: var(--well); }
+kbd { border: 1px solid var(--key-edge); background: var(--key-top); box-shadow: 0 2px 0 var(--key-side); }
+
+figure { margin: 0; }
+img.shot { display: block; width: 100%; height: auto; margin: 16px 0 6px; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+figcaption { color: var(--muted); font-size: .92rem; }
+
+.table { overflow-x: auto; margin: 10px 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+th, td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { color: var(--muted); font-weight: 600; }
+
+details { margin: 8px 0; padding: 12px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+details[open] { box-shadow: var(--shadow); }
+summary { cursor: pointer; font-weight: 600; }
+summary::marker { color: var(--accent); }
+details p { margin: 8px 0 0; color: var(--muted); }
+
+/* language switcher and table of contents: the extension's segmented control */
+.langs, .toc { display: flex; flex-wrap: wrap; gap: 2px; width: fit-content; max-width: 100%; margin: 14px 0; padding: 3px; border-radius: 11px; background: var(--well); box-shadow: inset 0 1px 2px rgba(0, 0, 0, .12); }
+.langs a, .toc a { padding: 5px 11px; border-radius: 8px; color: var(--muted); font-size: .9rem; text-decoration: none; }
+.langs a:hover, .toc a:hover { color: var(--text); }
+.langs [aria-current] { background: var(--key-top); color: var(--text); font-weight: 600; box-shadow: 0 1px 0 var(--shine) inset, 0 1px 3px rgba(0, 0, 0, .12); }
+
+/* the legal page reads like a document */
+main > ul, main > ol { padding-left: 1.3em; }
+li { margin: 4px 0; }
+footer { margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+footer a { color: var(--muted); }
