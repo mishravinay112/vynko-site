@@ -19,7 +19,7 @@ Contact: mishravinay112@gmail.com
 
 - Price: free. No paid tier, no ads, no watermark, no time limit. Optional donation link.
 - Browsers: Chrome, Microsoft Edge and other Chromium browsers on Windows, macOS, Linux and ChromeOS.
-- Languages: English, Spanish, Portuguese (Brazil), Hindi, French, German, Japanese.
+- Languages: the extension and this site are in 30 languages: English, العربية, বাংলা, Čeština, Dansk, Deutsch, Ελληνικά, Español, Français, ગુજરાતી, हिन्दी, Italiano, 日本語, ಕನ್ನಡ, 한국어, Magyar, മലയാളം, मराठी, Nederlands, Norsk, Polski, Português, Română, Русский, Suomi, Svenska, தமிழ், తెలుగు, Türkçe, Українська.
 - Screenshots: visible area, full scrolling page (handles lazy-loaded content, sticky headers and apps that scroll an inner panel such as Gmail or Slack), selected area, another window or the whole screen. PNG, JPG or WebP. Copy to clipboard or drag into other apps.
 - Recording: current tab, part of a tab (remembers the last area), any tab, a window or the full screen. 720p, 1080p or 4K. WebM, MP4 or GIF. Pause and resume, optional auto-stop, crash recovery, click highlighting.
 - Audio and camera: tab audio, microphone with live level meter, round webcam bubble. System audio when sharing a window or screen on Windows and ChromeOS; on macOS, tab audio and microphone only.
@@ -42,5 +42,5 @@ Contact: mishravinay112@gmail.com
 
 ## Pages
 
-- [Home](https://mishravinay112.github.io/vynko-site/): features, how-to guides, comparison, FAQ. Also in Spanish (/es/), Portuguese (/pt-br/), Hindi (/hi/), French (/fr/), German (/de/) and Japanese (/ja/)
-- [Privacy policy and terms](https://mishravinay112.github.io/vynko-site/privacy.html), also in Spanish (/es/), Portuguese (/pt-br/), Hindi (/hi/), French (/fr/), German (/de/) and Japanese (/ja/)
+- [Home](https://mishravinay112.github.io/vynko-site/): features, how-to guides, comparison, FAQ. Every page also exists in 29 other languages under /<code>/ (for example /de/, /ja/, /hi/, /ar/)
+- [Privacy policy and terms](https://mishravinay112.github.io/vynko-site/privacy.html), also in every site language
