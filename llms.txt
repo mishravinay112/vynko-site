@@ -42,5 +42,5 @@ Contact: mishravinay112@gmail.com
 
 ## Pages
 
-- [Home](https://mishravinay112.github.io/vynko-site/): features, how-to guides, comparison, FAQ
+- [Home](https://mishravinay112.github.io/vynko-site/): features, how-to guides, comparison, FAQ. Also in Spanish (/es/), Portuguese (/pt-br/), Hindi (/hi/), French (/fr/), German (/de/) and Japanese (/ja/)
 - [Privacy policy and terms](https://mishravinay112.github.io/vynko-site/privacy.html), also in Spanish (/es/), Portuguese (/pt-br/), Hindi (/hi/), French (/fr/), German (/de/) and Japanese (/ja/)

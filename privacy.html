@@ -6,7 +6,8 @@
 <title>Vynko privacy policy and terms of use</title>
 <meta name="description" content="Vynko privacy policy and terms: no servers, no accounts, no analytics and no network requests. Screenshots, recordings, webcam and microphone stay on your device.">
 <link rel="canonical" href="https://mishravinay112.github.io/vynko-site/privacy.html">
-<link rel="icon" href="icon.png" type="image/png">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="icon" href="icon.png" type="image/png" sizes="128x128">
 <link rel="alternate" hreflang="en" href="https://mishravinay112.github.io/vynko-site/privacy.html">
 <link rel="alternate" hreflang="es" href="https://mishravinay112.github.io/vynko-site/es/privacy.html">
 <link rel="alternate" hreflang="pt-BR" href="https://mishravinay112.github.io/vynko-site/pt-br/privacy.html">
@@ -21,11 +22,10 @@
 <meta property="og:image" content="https://mishravinay112.github.io/vynko-site/og.png">
 <link rel="preload" href="fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site.css">
+<script src="site.js"></script>
 </head>
 <body>
 <main>
-  <header><a href="index.html"><img src="icon.png" alt="" width="30" height="30"></a><a href="index.html">Vynko</a></header>
-  <nav class="langs" aria-label="Language"><a href="privacy.html" hreflang="en" lang="en" aria-current="page">English</a><a href="es/privacy.html" hreflang="es" lang="es">Español</a><a href="pt-br/privacy.html" hreflang="pt-BR" lang="pt-BR">Português</a><a href="hi/privacy.html" hreflang="hi" lang="hi">हिन्दी</a><a href="fr/privacy.html" hreflang="fr" lang="fr">Français</a><a href="de/privacy.html" hreflang="de" lang="de">Deutsch</a><a href="ja/privacy.html" hreflang="ja" lang="ja">日本語</a></nav>
   <h1>Terms of Use and Privacy Policy</h1>
 
   <p class="lede">Effective November 17, 2026. Plain English first: Vynko is free, it runs entirely in your browser, I never see what you capture, and you're responsible for how you use it.</p>
@@ -107,16 +107,5 @@
   <p>Questions about these terms or your privacy: Vinay Mishra, <a href="mailto:mishravinay112@gmail.com">mishravinay112@gmail.com</a>.</p>
 
 </main>
-<script>
-// Show the policy in the reader's language. A language picked from the list above is remembered.
-(() => {
-  const pages = { es: 'es', pt: 'pt-br', hi: 'hi', fr: 'fr', de: 'de', ja: 'ja' };
-  for (const a of document.querySelectorAll('.langs a')) a.addEventListener('click', () => { try { localStorage.vynkoLang = a.hreflang; } catch {} });
-  let picked = null;
-  try { picked = localStorage.vynkoLang; } catch {}
-  const lang = (picked || navigator.language || '').toLowerCase().split('-')[0];
-  if (pages[lang]) location.replace(`${pages[lang]}/privacy.html${location.hash}`);
-})();
-</script>
 </body>
 </html>

@@ -4,21 +4,30 @@
 
 :root {
   --font: Futura, Jost, sans-serif;
-  color-scheme: light dark;
+  color-scheme: light;
   --bg: #f5f4f1; --surface: #fdfdfb; --hover: #efeeeb; --text: #18181b; --muted: #5f5d66; --line: #e4e2dd;
   --key-top: #ffffff; --key-bottom: #f8f7f4; --key-edge: #e2dfd8; --key-side: #d3cfc6; --well: #e9e7e2;
   --accent: #f0531c; --accent-strong: #c2410c; --accent-text: #c2410c; --accent-soft: rgba(240, 83, 28, .12);
   --shine: rgba(255, 255, 255, .95);
   --shadow: 0 1px 2px rgba(24, 24, 27, .06), 0 8px 24px -6px rgba(24, 24, 27, .14);
+  --rec: #e5262b; --heart: #be123c; --heart-bg: rgba(225, 29, 72, .08); --shield: #15803d; --star: #d97706;
 }
+/* dark: follows the system unless the theme button picked light or dark */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme=light]) { color-scheme: dark;
     --bg: #141416; --surface: #1c1c20; --hover: #26262b; --text: #f3f2ef; --muted: #8d8b94; --line: #2c2c32;
     --key-top: #26262b; --key-bottom: #1e1e22; --key-edge: #303036; --key-side: #08080a; --well: #0b0b0d;
-    --accent: #ff6a2b; --accent-text: #ff8a5c; --accent-soft: rgba(255, 106, 43, .16);
+    --accent: #ff6a2b; --accent-text: #ff8a5c; --accent-soft: rgba(255, 106, 43, .16); --rec: #ff4545;
     --shine: rgba(255, 255, 255, .07); --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px -8px rgba(0, 0, 0, .7);
-  }
+    --heart: #fb7185; --heart-bg: rgba(251, 113, 133, .12); --shield: #4ade80; --star: #fbbf24; }
 }
+:root[data-theme=dark] { color-scheme: dark;
+    --bg: #141416; --surface: #1c1c20; --hover: #26262b; --text: #f3f2ef; --muted: #8d8b94; --line: #2c2c32;
+    --key-top: #26262b; --key-bottom: #1e1e22; --key-edge: #303036; --key-side: #08080a; --well: #0b0b0d;
+    --accent: #ff6a2b; --accent-text: #ff8a5c; --accent-soft: rgba(255, 106, 43, .16); --rec: #ff4545;
+    --shine: rgba(255, 255, 255, .07); --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px -8px rgba(0, 0, 0, .7);
+    --heart: #fb7185; --heart-bg: rgba(251, 113, 133, .12); --shield: #4ade80; --star: #fbbf24; }
+:root[data-theme=light] { color-scheme: light; }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -28,10 +37,6 @@ a { color: var(--accent-text); text-underline-offset: 3px; }
 a:hover { color: var(--accent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 
-/* header: the same brand mark as the popup */
-header { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
-header img { width: 30px; height: 30px; }
-header a { color: inherit; text-decoration: none; }
 
 h1 { margin: 28px 0 12px; font-size: clamp(1.9rem, 5vw, 2.6rem); font-weight: 600; line-height: 1.12; letter-spacing: -.02em; }
 h2 { margin: 52px 0 12px; font-size: 1.45rem; font-weight: 600; letter-spacing: -.01em; }
@@ -91,5 +96,72 @@ details p { margin: 8px 0 0; color: var(--muted); }
 /* the legal page reads like a document */
 main > ul, main > ol { padding-left: 1.3em; }
 li { margin: 4px 0; }
-footer { margin-top: 64px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
-footer a { color: var(--muted); }
+
+/* ---------- the extension's icons, buttons and page animation ---------- */
+.i { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+main { animation: pageIn .3s ease-out both; }
+@keyframes pageIn { from { opacity: 0; transform: translateY(6px); } }
+
+header.site { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+header.site .brand { display: flex; align-items: center; gap: 10px; margin-right: auto; color: var(--text); font-size: 19px; font-weight: 600; letter-spacing: -.01em; text-decoration: none; }
+header.site .brand img { width: 30px; height: 30px; transition: transform .3s cubic-bezier(.2, .8, .2, 1); }
+header.site .brand:hover img { transform: rotate(-8deg) scale(1.06); }
+header.site .actions { display: flex; align-items: center; gap: 8px; }
+header.site .langs { order: 3; width: 100%; margin: 0; }
+.ghost { display: grid; place-items: center; width: 34px; height: 34px; padding: 0; border: 0; border-radius: 9px; background: none; color: var(--muted); cursor: pointer; }
+.ghost:hover { color: var(--text); background: var(--hover); }
+
+/* "Support with love": the popup's heart button, beating on hover */
+.donate, .rate { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 13px; border-radius: 17px; font-size: .88rem; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background .2s, transform .2s; }
+.donate { background: var(--heart-bg); color: var(--heart); }
+.donate:hover { color: var(--heart); background: rgba(225, 29, 72, .16); transform: translateY(-1px); }
+.donate .i { width: 15px; height: 15px; fill: currentColor; stroke: none; }
+.donate:hover .i { animation: beat 1s ease infinite; }
+@keyframes beat { 15% { transform: scale(1.25); } 30% { transform: scale(1); } 45% { transform: scale(1.18); } 60% { transform: scale(1); } }
+.rate { border: 1px solid var(--key-edge); background: var(--key-top); color: var(--text); box-shadow: 0 1px 0 var(--shine) inset, 0 2px 0 var(--key-side); }
+.rate:hover { color: var(--text); transform: translateY(-1px); }
+.rate .i { width: 15px; height: 15px; fill: var(--star); stroke: var(--star); }
+.rate:hover .i { animation: spinStar .6s ease; }
+@keyframes spinStar { 50% { transform: rotate(72deg) scale(1.2); } }
+
+footer.site { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 20px; margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+footer.site .links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+footer.site a { color: var(--muted); }
+footer.site a:hover { color: var(--text); }
+footer.site p { width: 100%; margin: 0; font-size: .85rem; }
+.private { display: flex; align-items: center; gap: 10px; }
+.shield { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: rgba(22, 163, 74, .12); color: var(--shield); flex: none; }
+.shield .i { width: 19px; height: 19px; }
+.private > span:last-child { display: flex; flex-direction: column; line-height: 1.25; }
+.private b { color: var(--text); font-size: .9rem; }
+.private small { font-size: .8rem; }
+
+/* ---------- the popup's capture keys, with the same hover animations ---------- */
+.keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 10px; margin: 18px 0 6px; }
+.keys-label { margin: 22px 0 0; color: var(--muted); font-size: .85rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.key {
+  --lift: 0px; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px;
+  height: 96px; padding: 10px; border: 1px solid var(--key-edge); border-radius: 14px;
+  background: linear-gradient(var(--key-top), var(--key-bottom)); color: var(--muted); font-size: .85rem; font-weight: 500; text-decoration: none;
+  box-shadow: 0 1px 0 var(--shine) inset, 0 2px 0 var(--key-side), 0 6px 14px -8px rgba(0, 0, 0, .25);
+  transform: translateY(var(--lift)); transition: transform .15s ease-out, box-shadow .15s ease-out, color .2s;
+}
+.key:is(:hover, :focus-visible) { --lift: -1px; color: var(--text); box-shadow: 0 1px 0 var(--shine) inset, 0 3px 0 var(--key-side), 0 10px 18px -8px rgba(0, 0, 0, .28); }
+.key:active { --lift: 2px; transition-duration: .06s; box-shadow: 0 1px 0 var(--shine) inset, 0 0 0 var(--key-side), 0 1px 2px rgba(0, 0, 0, .15); }
+.ki { width: 40px; height: 40px; overflow: visible; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; color: var(--accent); }
+.rec .ki { color: var(--rec); }
+.ki * { transform-box: fill-box; transform-origin: center; }
+.ki .solid { fill: currentColor; stroke: none; }
+.ki .flash { fill: currentColor; stroke: none; opacity: 0; }
+.key:is(:hover, :focus-visible) .flash { animation: flash .8s ease-out; }
+@keyframes flash { 0%, 100% { opacity: 0; } 20% { opacity: .4; } }
+.key:is(:hover, :focus-visible) .scroll { animation: scrollPage 1s ease-in-out; }
+@keyframes scrollPage { 50% { transform: translateY(-8px); } }
+.key:is(:hover, :focus-visible) .c { animation: pinch .7s ease-in-out; }
+@keyframes pinch { 50% { transform: translate(var(--dx), var(--dy)); } }
+.key:is(:hover, :focus-visible) .recdot { animation: blink .9s ease-in-out 2; }
+@keyframes blink { 50% { opacity: .3; transform: scale(.75); } }
+.key:is(:hover, :focus-visible) .back { animation: slideBack .7s ease-in-out; }
+@keyframes slideBack { 50% { transform: translate(-2px, 2px); } }
+
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
