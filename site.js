@@ -422,7 +422,9 @@ const words = () => WORDS[document.documentElement.lang] || WORDS.en;
 const rel = location.pathname.slice(ROOT.pathname.length); // "de/privacy.html", "privacy.html", ""
 const folder = LANGS.find(([, , f]) => f && rel.startsWith(f + '/'))?.[2] ?? '';
 const file = rel.slice(folder ? folder.length + 1 : 0); // "privacy.html", "index.html" or ""
-const pageIn = f => `${ROOT}${f ? f + '/' : ''}${file === 'index.html' ? '' : file}`;
+// pages that exist only in some languages say so; other languages go to their home page instead of a missing page
+const only = document.querySelector('meta[name=vynko-langs]')?.content.split(/\s+/);
+const pageIn = f => `${ROOT}${f ? f + '/' : ''}${file === 'index.html' || (only && !only.includes(f || 'en')) ? '' : file}`;
 // English is the default page: send readers to their own language, unless they picked one themselves
 // ?lang=xx (the extension adds it for its chosen language) counts as the reader's pick
 const asked = new URLSearchParams(location.search).get('lang');
@@ -431,7 +433,7 @@ if (!folder) {
   const picked = store('vynkoLang');
   const want = (picked || navigator.language || '').toLowerCase().replace(/^(nb|nn)\b/, 'no'); // browsers say nb or nn for Norwegian
   const match = LANGS.find(([code]) => code !== 'en' && (want === code.toLowerCase() || want.split('-')[0] === code.toLowerCase().split('-')[0]));
-  if (match && picked !== 'en') location.replace(pageIn(match[2]) + location.hash);
+  if (match && picked !== 'en' && !only) location.replace(pageIn(match[2]) + location.hash);
 }
 
 addEventListener('DOMContentLoaded', () => {

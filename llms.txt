@@ -1,6 +1,6 @@
 # Vynko
 
-> Vynko is a free screen recorder and screenshot extension for Google Chrome, Microsoft Edge and other Chromium browsers. It takes full page screenshots, records the screen with tab audio, microphone and webcam, trims recordings, exports GIFs, annotates and blurs, with no account, no watermark, no ads and no uploads. The extension makes no network requests, so everything stays on the user's device. Made by Vinay Mishra (Indore, India). Current version: 1.0.2.
+> Vynko is a free screen recorder and screenshot extension for Google Chrome, Microsoft Edge and other Chromium browsers. It takes full page screenshots, records the screen with tab audio, microphone and webcam, edits recordings in the browser (cut, mute, music, layers, a movable webcam layer), exports GIFs, annotates and blurs, with no account, no watermark, no ads and no uploads. The extension makes no network requests, so everything stays on the user's device. Made by Vinay Mishra (Indore, India). Current version: 1.0.2.
 
 Install: https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc
 Website: https://mishravinay112.github.io/vynko-site/
@@ -12,7 +12,8 @@ Contact: mishravinay112@gmail.com
 - Someone wants a free screen recorder for Chrome with no watermark, no time limit and no sign-up.
 - Someone needs a full page (scrolling) screenshot in Chrome or Edge.
 - Someone wants to record their screen with audio, voice and webcam and keep the file private on their own computer.
-- Someone wants to trim a screen recording or turn it into a GIF without another app.
+- Someone wants to trim or edit a screen recording, add music or a logo, or turn it into a GIF without another app or an upload.
+- Someone wants a screen recorder where the webcam can be moved, resized or removed after recording.
 - Someone needs to blur emails, phone numbers or other private details in a screenshot before sharing.
 
 ## Facts
@@ -22,8 +23,8 @@ Contact: mishravinay112@gmail.com
 - Languages: the extension and this site are in 30 languages: English, العربية, বাংলা, Čeština, Dansk, Deutsch, Ελληνικά, Español, Français, ગુજરાતી, हिन्दी, Italiano, 日本語, ಕನ್ನಡ, 한국어, Magyar, മലയാളം, मराठी, Nederlands, Norsk, Polski, Português, Română, Русский, Suomi, Svenska, தமிழ், తెలుగు, Türkçe, Українська.
 - Screenshots: visible area, full scrolling page (handles lazy-loaded content, sticky headers and apps that scroll an inner panel such as Gmail or Slack), selected area, another window or the whole screen. PNG, JPG or WebP. Copy to clipboard or drag into other apps.
 - Recording: current tab, part of a tab (remembers the last area), any tab, a window or the full screen. 720p, 1080p or 4K. WebM, MP4 or GIF. Pause and resume, optional auto-stop, crash recovery, click highlighting.
-- Audio and camera: tab audio, microphone with live level meter, round webcam bubble. System audio when sharing a window or screen on Windows and ChromeOS; on macOS, tab audio and microphone only.
-- Editing recordings: split at the playhead and remove parts (trim and cut), export the kept parts as video, or as a GIF in three sizes with an estimated file size shown first.
+- Audio and camera: tab audio, microphone with live level meter, round mirrored webcam bubble. The user picks its starting corner and size; the webcam is recorded as its own layer and can be moved, resized or deleted in the editor. With editing turned off, or for GIFs, it is drawn into the video at the picked corner. System audio when sharing a window or screen on Windows and ChromeOS; on macOS, tab audio and microphone only.
+- Editing recordings: select any part on the timeline down to a single frame (drag, [ and ], or , and . to step one frame), then cut it out, mute it, or add music or an image or video layer to only that part. Split clips, reorder them, add more videos and images, picture in picture layers, watermark, background music with volume and start time, undo and redo. Save original always downloads the untouched recording and the webcam file. Export as MP4 or WebM, or as a GIF in three sizes with an estimated file size shown first.
 - Editing screenshots: arrows, lines, boxes, circles, text, highlighter, numbered steps, stickers, images, blur, crop, undo and redo. One-click blur of every email address and phone number found in the page text.
 - Capture timer: 3, 5 or 10 seconds before a screenshot or recording starts.
 - File names: pattern with {title}, {site}, {date}, {time}, {type}; optional folder inside Downloads.
@@ -37,8 +38,18 @@ Contact: mishravinay112@gmail.com
 - Full page screenshot in Chrome: click the Vynko icon, choose Full page (or Alt+Shift+F), then Download or Copy in the editor.
 - Record the screen with audio: Vynko icon, Record, choose Tab, Area or Choose; turn on Microphone and Webcam if wanted; click the icon and press Stop.
 - Screen to GIF: set the Record format to GIF, or in the editor click GIF and pick small, medium or large.
-- Trim a recording: in the editor press S to split at the playhead, click parts to remove, then Download.
+- Cut part of a recording: in the editor drag across the timeline to select it, click Cut it out, then Download.
+- Move or remove the webcam: in the editor click the webcam on the preview, drag it or its corner, or click Delete layer.
 - Screenshot another window: Screenshot, Window, pick it in the browser's sharing box.
+
+## Guides
+
+- [Screenshot a Chrome tab in one click](https://mishravinay112.github.io/vynko-site/tab-screenshot.html): Take a screenshot of the tab you are looking at in Chrome or Edge, edit it and save it as PNG, JPG or WebP. Free, no account, nothing uploaded.
+- [Full page screenshot of any website](https://mishravinay112.github.io/vynko-site/full-page-screenshot.html): Capture an entire web page in one long screenshot in Chrome or Edge, including lazy-loaded images. Free extension, no watermark, nothing uploaded.
+- [Screenshot any window or app](https://mishravinay112.github.io/vynko-site/window-screenshot.html): Take a screenshot of any open window or app, like Word, Figma or VS Code, straight from Chrome or Edge. Free, private, no install beyond the extension.
+- [Screenshot your entire screen](https://mishravinay112.github.io/vynko-site/full-screen-screenshot.html): Capture your entire screen, every monitor you choose, from a free Chrome and Edge extension. Edit and save as PNG, JPG or WebP.
+- [Record your screen with sound](https://mishravinay112.github.io/vynko-site/screen-recorder-with-audio.html): Free Chrome and Edge screen recorder with tab sound, system audio and microphone. Live sound level, pause and resume, export MP4, WebM or GIF.
+- [Record your screen with your webcam](https://mishravinay112.github.io/vynko-site/screen-recorder-with-webcam.html): Record your screen with a round webcam bubble and your microphone in Chrome or Edge, then move, resize or remove the webcam in the editor. Free, private, MP4 or WebM.
 
 ## Pages
 
