@@ -44,6 +44,8 @@ Contact: mishravinay112@gmail.com
 
 ## Guides
 
+Each guide is also in the 29 other site languages, under /<code>/ (for example /de/full-page-screenshot.html).
+
 - [Screenshot a Chrome tab in one click](https://mishravinay112.github.io/vynko-site/tab-screenshot.html): Take a screenshot of the tab you are looking at in Chrome or Edge, edit it and save it as PNG, JPG or WebP. Free, no account, nothing uploaded.
 - [Full page screenshot of any website](https://mishravinay112.github.io/vynko-site/full-page-screenshot.html): Capture an entire web page in one long screenshot in Chrome or Edge, including lazy-loaded images. Free extension, no watermark, nothing uploaded.
 - [Screenshot any window or app](https://mishravinay112.github.io/vynko-site/window-screenshot.html): Take a screenshot of any open window or app, like Word, Figma or VS Code, straight from Chrome or Edge. Free, private, no install beyond the extension.
