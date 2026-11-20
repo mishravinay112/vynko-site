@@ -1,6 +1,6 @@
 # Vynko
 
-> Vynko is a free screen recorder and screenshot extension for Google Chrome, Microsoft Edge and other Chromium browsers. It takes full page screenshots, records the screen with tab audio, microphone and webcam, edits recordings in the browser (cut, mute, music, layers, a movable webcam layer), exports GIFs, annotates and blurs, with no account, no watermark, no ads and no uploads. The extension makes no network requests, so everything stays on the user's device. Made by Vinay Mishra (Indore, India). Current version: 1.0.3.
+> Vynko is a free screen recorder and screenshot extension for Google Chrome, Microsoft Edge and other Chromium browsers. It takes full page screenshots, records the screen with tab audio, microphone and webcam, edits recordings in the browser (cut, mute, music, layers, a movable webcam layer), exports GIFs, makes Reels, Shorts and TikToks from videos or photos, annotates and blurs, with no account, no watermark, no ads and no uploads. The extension makes no network requests, so everything stays on the user's device. Made by Vinay Mishra (Indore, India). Current version: 1.1.0.
 
 Install: https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc
 Website: https://mishravinay112.github.io/vynko-site/
@@ -15,6 +15,7 @@ Contact: mishravinay112@gmail.com
 - Someone wants to trim or edit a screen recording, add music or a logo, or turn it into a GIF without another app or an upload.
 - Someone wants a screen recorder where the webcam can be moved, resized or removed after recording.
 - Someone wants to record a WhatsApp, Zoom or other call with both sides: system sound for the other person, microphone for their own voice.
+- Someone wants to turn a long video or a set of photos into Reels, Shorts or TikToks for free, on an ordinary laptop, without uploading anything.
 - Someone needs to blur emails, phone numbers or other private details in a screenshot before sharing.
 
 ## Facts
@@ -26,6 +27,7 @@ Contact: mishravinay112@gmail.com
 - Recording: current tab, part of a tab (remembers the last area), any tab, a window or the full screen. 720p, 1080p or 4K. WebM, MP4 or GIF. Pause and resume, optional auto-stop, crash recovery, click highlighting.
 - Audio and camera: tab audio, system sound from other apps (a System sound switch; record Entire screen with Share system audio; on a Mac this needs macOS 14.2 or newer and a recent Chrome), microphone with live level meter, round mirrored webcam bubble. Microphone and system sound can be turned on or off during a recording; with both on, Vynko suggests headphones to avoid echo. A single window has no sound of its own, so Vynko offers to add the computer's sound. The user picks its starting corner and size; the webcam is recorded as its own layer and can be moved, resized or deleted in the editor. With editing turned off, or for GIFs, it is drawn into the video at the picked corner. System audio when sharing a window or screen on Windows and ChromeOS; on macOS, tab audio and microphone only.
 - Editing recordings: select any part on the timeline down to a single frame (drag, [ and ], or , and . to step one frame), then cut it out, mute it, or add music or an image or video layer to only that part. Split clips, reorder them, add more videos and images, picture in picture layers, watermark, background music with volume and start time, undo and redo. Save original always downloads the untouched recording and the webcam file. Export as MP4 or WebM, or as a GIF in three sizes with an estimated file size shown first.
+- Reel Maker: a popup tab that opens videos or photos for Reels, Shorts and TikToks. Cuts clips every 15, 30, 60 or 90 seconds, at scene changes or at silences; shapes 9:16, 3:4, 16:9 or 1:1, filled (with a draggable focus) or fitted on a blurred or plain background; rotate; text and emoji layers; several songs with volume and fades; transitions between clips (crossfade, fade through black, slide, zoom); slow zoom on photos. Photos alone become a video. Saves the reel as a 1080x1920 MP4, or each clip as its own file.
 - Editing screenshots: arrows, lines, boxes, circles, text, highlighter, numbered steps, stickers, images, blur, crop, undo and redo. One-click blur of every email address and phone number found in the page text.
 - Capture timer: 3, 5 or 10 seconds before a screenshot or recording starts.
 - File names: pattern with {title}, {site}, {date}, {time}, {type}; optional folder inside Downloads.

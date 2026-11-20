@@ -66,7 +66,7 @@
       "applicationCategory": "MultimediaApplication",
       "applicationSubCategory": "画面録画・スクリーンショットツール",
       "operatingSystem": "Google Chrome, Microsoft Edge and other Chromium browsers on Windows, macOS, Linux and ChromeOS",
-      "softwareVersion": "1.0.3",
+      "softwareVersion": "1.1.0",
       "description": "スクリーンショットと画面録画のための無料のブラウザー拡張機能。ページ全体、表示範囲、選択範囲、ウィンドウのスクリーンショット。タブの音声、マイク、Web カメラ付きでのタブ、範囲、ウィンドウ、画面全体の録画。フレーム単位の選択、カット、ミュート、音楽、画像と動画のレイヤー、動かせる Web カメラのレイヤーを備えた動画エディター。GIF 書き出し、注釈、ぼかし、メールアドレスと電話番号の自動ぼかし。サーバーを持たず、ネットワーク通信を一切行いません。",
       "url": "https://mishravinay112.github.io/vynko-site/",
       "installUrl": "https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc",
@@ -75,6 +75,7 @@
       "screenshot": [
         "https://mishravinay112.github.io/vynko-site/shot-record.png",
         "https://mishravinay112.github.io/vynko-site/shot-video-editor.png",
+        "https://mishravinay112.github.io/vynko-site/shot-reel-maker.png",
         "https://mishravinay112.github.io/vynko-site/shot-webcam.png",
         "https://mishravinay112.github.io/vynko-site/shot-annotate.png",
         "https://mishravinay112.github.io/vynko-site/shot-full-page.png",
@@ -87,6 +88,7 @@
         "ページ全体のスクリーンショット (スクロールキャプチャ、遅延読み込みのコンテンツ、内部でスクロールするパネルに対応)",
         "表示範囲、選択範囲、ウィンドウ、画面全体のスクリーンショット",
         "タブ、タブの一部、任意のウィンドウ、画面全体の画面録画",
+        "Reel Maker: 動画や写真から 9:16 の Reels、Shorts、TikToks を作成。クリップ、曲、テキスト、トランジションに対応",
         "録画にタブの音声、マイク、丸い Web カメラのバブルを追加",
         "Web カメラを独立したレイヤーとして録画: 録画後に移動、サイズ変更、削除が可能",
         "一時停止、再開、自動停止タイマー、クラッシュからの復元",
@@ -181,6 +183,7 @@
     <li><b>Web カメラは独立したレイヤー</b>録画した後でも、Web カメラを好きな場所に動かしたり、サイズを変えたり、消したりできます。</li>
     <li><b>レイヤーと音楽</b>ロゴや写真、別の動画を上に重ねたり、BGM を入れたりできます。どの操作も元に戻せます。</li>
     <li><b>元の映像はいつでも残る</b>どれだけ編集しても、「元の録画を保存」で手を加えていない録画と、別ファイルの Web カメラ映像が手に入ります。</li>
+    <li><b>Reel Maker</b>動画や数枚の写真から Reels、Shorts、TikToks を作れます。クリップ、曲、テキスト、トランジションに対応し、9:16 の MP4 で保存します。</li>
     <li><b>GIF 作成</b>直接 GIF で録画するか、動画を小・中・大の GIF に変換できます。ファイルサイズの目安も表示されます。</li>
     <li><b>注釈</b>矢印、四角形、円、テキスト、蛍光ペン、番号付きステップ、ステッカー、切り抜きが使えます。</li>
     <li><b>個人情報をぼかす</b>手動で好きな部分をぼかせるほか、ページ上のメールアドレスと電話番号をワンクリックでまとめてぼかせます。</li>
@@ -220,6 +223,18 @@
   </ol>
   <figure>
     <img class="shot" src="../shot-video-editor.png" width="1280" height="800" alt="録画の一部が選択され、カット、ミュート、音楽やレイヤーの追加ができる状態の Vynko の動画エディター" loading="lazy">
+  </figure>
+
+  <h3 id="make-reels">動画や写真から Reels、Shorts、TikToks を作る方法</h3>
+  <ol>
+    <li>Vynko のアイコンをクリックして <b>Reel Maker</b> を開きます。<b>クリップを作成</b> で動画の分け方を、<b>比率</b> で 9:16 などを選び、動画の合わせ方を決めます。</li>
+    <li><b>動画や写真を選択</b> をクリックします。動画 1 本、複数の動画、または写真だけを選べます。写真だけの場合は 1 枚 3 秒の動画になります。</li>
+    <li><b>レイヤー</b> ボックスのアイコンから、テキスト、絵文字、画像、曲を追加します。それぞれをタイムライン上でドラッグして、表示するタイミングと長さを決めます。</li>
+    <li>クリップをクリックして、入り方を選びます: クロスフェード、黒を挟んでフェード、スライド、ズーム。</li>
+    <li><b>ダウンロード</b> をクリックするとリール全体を 1080x1920 の MP4 で保存し、<b>クリップごとに保存</b> をクリックするとクリップごとに 1 ファイルずつ保存します。</li>
+  </ol>
+  <figure>
+    <img class="shot" src="../shot-reel-maker.png" width="1280" height="800" alt="Vynko の Reel Maker。スマホ枠の写真、キャプション、曲、クロスフェード" loading="lazy">
   </figure>
 
   <h3 id="webcam">Web カメラを動かす、サイズを変える、消す方法</h3>
