@@ -1,6 +1,6 @@
 # Vynko
 
-> Vynko is a free screen recorder and screenshot extension for Google Chrome, Microsoft Edge and other Chromium browsers. It takes full page screenshots, records the screen with tab audio, microphone and webcam, edits recordings in the browser (cut, mute, music, layers, a movable webcam layer), exports GIFs, makes Reels, Shorts and TikToks from videos or photos, annotates and blurs, with no account, no watermark, no ads and no uploads. The extension makes no network requests, so everything stays on the user's device. Made by Vinay Mishra (Indore, India). Current version: 1.1.0.
+> Vynko is a free screen recorder and screenshot extension for Google Chrome, Microsoft Edge and other Chromium browsers. It takes full page screenshots, records the screen with tab audio, microphone and webcam, edits recordings in the browser (cut, mute, music, layers, a movable webcam layer), exports GIFs, makes Reels, Shorts and TikToks from videos or photos, annotates and blurs, with no account, no watermark, no ads and no uploads. The extension makes no network requests, so everything stays on the user's device. Made by Vinay Mishra (Indore, India). Current version: 1.1.1.
 
 Install: https://chromewebstore.google.com/detail/vynko-screen-recorder-scr/kknnimejmjhonepakiplgocadldibhmc
 Website: https://mishravinay112.github.io/vynko-site/
